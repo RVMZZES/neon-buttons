@@ -1,0 +1,92 @@
+body {
+  background: #646464;
+}
+article {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 15rem;
+}
+.main__section:hover {
+  .main__section__form {
+    transform: translateY(0px);
+    position: relative;
+    transition: transform 0.5s;
+  }
+    .main__section__circle {
+      box-shadow: 10px 10px 20px 10px rgba(0, 248, 255, 0.4),
+      -10px -10px 20px 10px rgba(255, 0, 242, 0.4),
+      0px 0px 10px 5px rgba(211, 247, 250, 0.9),
+      inset 50px 50px 200px rgba(208, 0, 255, 0.7),
+      inset -50px -50px 200px rgba(45, 239, 233, 0.7),
+      inset 5px 5px 10px rgba(247, 235, 255, 0.9),
+      inset -5px -5px 10px rgba(229, 255, 252, 0.9);
+      transition: box-shadow 0.5s;
+    }
+    .circle__img {
+      filter: brightness(0) invert(1);
+      transition: filter 0.5s;
+    }
+  }
+.main__section__circle {
+  background: #414141;
+  border-radius: 100%;
+  box-shadow: 5px 5px 20px #333333,
+              5px 5px 20px #333333;
+  margin: 2rem;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.5s;
+  .circle__img {
+    width: 100px;
+    height: 100px;
+    filter: brightness(1) invert(0);
+    transition: filter 0.5s;
+  }
+}
+
+.main__section__form {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  background: white;
+  border-radius: 100%;
+  width: 295px;
+  height: 295px;
+  box-shadow: 5px 5px 20px #333333,
+              5px 5px 20px #333333;
+  transform: translateY(-330px) translateX(1px);
+
+  z-index: -1;
+  position: relative;
+  transition: transform 0.6s;
+  &__lorem {
+    max-width: calc(280px - 10%);
+    text-align: center;
+  }
+
+  &__button {
+    padding: 0.3rem;
+    margin: 0.5rem auto;
+    width: 6rem;
+    border: 2px dotted grey;
+    border-radius: 10px;
+  }
+  & a {
+    text-decoration: none;
+    color: #414141;
+  }
+  &__button:hover {
+  background: rgba(182, 182, 182, 0.3);
+  }
+  &__button:active {
+    box-shadow:
+    inset 1px 1px 5px rgba(145, 145, 145, 0.51),
+    inset -1px -1px 5px rgba(145, 145, 145, 0.51);
+  }
+}
